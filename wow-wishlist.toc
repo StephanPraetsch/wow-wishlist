@@ -1,0 +1,7 @@
+## Interface: 110005
+## Version: 0.0.1
+## Title: Hello World
+## Notes: My first addon
+## Author: Stephan Prätsch
+
+main.lua
