@@ -22,3 +22,11 @@ frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 frame:RegisterEvent("CHAT_MSG_CHANNEL")
 frame:SetScript("OnEvent", frame.OnEvent)
+
+-- increment the index for each slash command
+SLASH_HELLOW1 = "/wl"
+SLASH_HELLOW2 = "/wishlist"
+
+SlashCmdList.HELLOW = function(msg, editBox)
+    print("slash command was called", msg)
+end
