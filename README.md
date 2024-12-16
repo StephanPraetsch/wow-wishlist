@@ -9,3 +9,10 @@ copy this folder `wow-wishlist` into your local wow folder `World of Warcraft\_r
 ```shell
 xcopy /Y . 'D:\Blizzard\World of Warcraft\_retail_\Interface\AddOns/wow-wishlist'
 ```
+
+## how to see errors
+
+```
+/console scriptErrors 1
+/reload
+```
