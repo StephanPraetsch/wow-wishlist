@@ -30,15 +30,8 @@ function frame:PLAYER_ENTERING_WORLD(event, isLogin, isReload)
     print("new PLAYER_ENTERING_WORLD event", event, isLogin, isReload)
 end
 
-function frame:CHAT_MSG_CHANNEL(event, text, playerName, _, channelName)
-    print("new CHAT_MSG_CHANNEL event", event, text, playerName, channelName)
-    Database.numberOfChatMessages = (Database.numberOfChatMessages or 0) + 1
-    print("that was the", Database.numberOfChatMessages, "chat message")
-end
-
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
-frame:RegisterEvent("CHAT_MSG_CHANNEL")
 frame:SetScript("OnEvent", frame.OnEvent)
 
 function frame:InitializeOptions()
