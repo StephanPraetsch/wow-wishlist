@@ -1,7 +1,7 @@
 print("hello wishlist")
 
 local frame = CreateFrame("Frame")
-Database = Database or {}
+Database = Database or {} -- /dump Database
 
 function frame:OnEvent(event, ...)
     self[event](self, event, ...)
