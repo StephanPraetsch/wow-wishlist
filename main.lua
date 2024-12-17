@@ -1,4 +1,8 @@
-print("hello wishlist")
+local addonName, addonData = ...
+
+print("hello wishlist", addonName, addonData)
+
+OptionsPanel = addonData.OptionsPanel
 
 ADDON_NAME = "wow-wishlist"
 
@@ -36,6 +40,8 @@ frame:SetScript("OnEvent", frame.OnEvent)
 
 function frame:InitializeOptions()
     print("frame:InitializeOptions")
+    OptionsPanel.init()
+
     self.panel = CreateFrame("Frame")
     self.panel.name = "HelloWorld"
 
@@ -70,4 +76,5 @@ SlashCmdList.HELLOW = function(msg, editBox)
     local settingsCategoryID = frame.panel.categoryID
     print("open category", settingsCategoryID)
     Settings.OpenToCategory(settingsCategoryID)
+    OptionsPanel.show()
 end
