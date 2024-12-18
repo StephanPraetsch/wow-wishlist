@@ -7,7 +7,6 @@ OptionsPanel = addonData.OptionsPanel
 ADDON_NAME = "wow-wishlist"
 
 local frame = CreateFrame("Frame")
-Database = Database or {}
 
 function frame:OnEvent(event, addOnName)
     if addOnName == ADDON_NAME then
