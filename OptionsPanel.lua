@@ -5,7 +5,6 @@ addonData.OptionsPanel = {}
 local state = {}
 
 local function init()
-    print("OptionsPanel initializing")
     panel = CreateFrame("Frame")
     panel.name = "HelloWorld"
 
@@ -28,18 +27,10 @@ local function init()
     local category = Settings.RegisterCanvasLayoutCategory(panel, ADDON_NAME)
     Settings.RegisterAddOnCategory(category)
     state.categoryID = category:GetID()
-    print("OptionsPanel initialized", state.categoryID)
 end
 addonData.OptionsPanel.init = init
 
 local function show()
-    print("OptionsPanel show", state.categoryID)
     Settings.OpenToCategory(state.categoryID)
 end
 addonData.OptionsPanel.show = show
-
-local function hide()
-    print("OptionsPanel hide")
-end
-addonData.OptionsPanel.hide = hide
-

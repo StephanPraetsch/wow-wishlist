@@ -1,7 +1,5 @@
 local addonName, addonData = ...
 
-print("hello wishlist", addonName, addonData)
-
 OptionsPanel = addonData.OptionsPanel
 
 ADDON_NAME = "wow-wishlist"
@@ -10,11 +8,9 @@ local frame = CreateFrame("Frame")
 
 function frame:OnEvent(event, addOnName)
     if addOnName == ADDON_NAME then
-        print("special event", event, addOnName)
-        self.db = Database
         self:InitializeOptions()
         hooksecurefunc("JumpOrAscendStart", function()
-            if self.db.reportJump then
+            if Database.reportJump then
                 print("Your character jumped.")
             end
         end)
@@ -45,7 +41,6 @@ frame:RegisterEvent("CHAT_MSG_CHANNEL")
 frame:SetScript("OnEvent", frame.OnEvent)
 
 function frame:InitializeOptions()
-    print("frame:InitializeOptions")
     OptionsPanel.init()
 end
 
@@ -53,6 +48,5 @@ SLASH_HELLOW1 = "/wl"
 SLASH_HELLOW2 = "/wishlist"
 
 SlashCmdList.HELLOW = function(msg, editBox)
-    print("slash command was called", msg)
     OptionsPanel.show()
 end
