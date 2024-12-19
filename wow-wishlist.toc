@@ -1,4 +1,4 @@
-## Interface: 110005
+## Interface: 110007
 ## Version: 0.0.1
 ## Title: Wishlist
 ## Notes: To manage your desired items, e.g. BIS items

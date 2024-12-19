@@ -25,3 +25,9 @@ xcopy /Y . 'D:\Blizzard\World of Warcraft\_retail_\Interface\AddOns/wow-wishlist
 ```
 
 clear database: remove specific file in `D:\Blizzard\World of Warcraft\_retail_\WTF\Account\123456789\SavedVariables`
+
+## which version is the current?
+
+```
+/dump GetBuildInfo()
+```
