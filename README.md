@@ -31,3 +31,12 @@ clear database: remove specific file in `D:\Blizzard\World of Warcraft\_retail_\
 ```
 /dump GetBuildInfo()
 ```
+
+## some sites
+
+* https://www.youtube.com/watch?v=nfaE7NQhMlc&list=PL3wt7cLYn4N-3D3PTTUZBM2t1exFmoA2G&index=1
+* https://wowprogramming.com/
+* https://warcraft.wiki.gg/wiki/Patch_10.0.0/API_changes
+* https://github.com/zorker/rothui/blob/master/wow8.0/oUF_Simple/core/functions.lua
+* https://wowprogramming.com/
+* https://github.com/zavon25/BISRedux
