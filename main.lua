@@ -38,9 +38,9 @@ frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 --frame:RegisterEvent("CHAT_MSG_CHANNEL")
 frame:SetScript("OnEvent", frame.OnEvent)
 
-SLASH_HELLOW1 = "/wl"
-SLASH_HELLOW2 = "/wishlist"
+SLASH_WISHLIST1 = "/wlo"
+SLASH_WISHLIST2 = "/wishlist-options"
 
-SlashCmdList.HELLOW = function(msg, editBox)
+SlashCmdList.WISHLIST = function(msg, editBox)
     OptionsPanel.show()
 end
