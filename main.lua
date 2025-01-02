@@ -7,7 +7,7 @@ ADDON_NAME = "wow-wishlist"
 local frame = CreateFrame("Frame")
 
 function frame:OnEvent(event, ...)
-    if DEBUG then
+    if Database.debug then
         print("onEvent", event, ...)
     end
     self[event](self, event, ...)
@@ -30,11 +30,16 @@ function frame:PLAYER_ENTERING_WORLD(event, isLogin, isReload)
 end
 
 function frame:CHAT_MSG_CHANNEL(event, text, playerName, _, channelName)
-    --print("new CHAT_MSG_CHANNEL event", event, text, playerName, channelName)
+    if Database.debug then
+        print("new CHAT_MSG_CHANNEL event", event, text, playerName, channelName)
+    end
 end
 
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
+--frame:RegisterEvent("GET_ITEM_INFO_RECEIVED", function(event, itemid)
+--    print("GET_ITEM_INFO_RECEIVED", event, itemid)
+--end)
 --frame:RegisterEvent("CHAT_MSG_CHANNEL")
 frame:SetScript("OnEvent", frame.OnEvent)
 

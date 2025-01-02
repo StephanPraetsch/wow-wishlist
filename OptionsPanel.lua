@@ -16,8 +16,16 @@ addonData.OptionsPanel = {
         end)
         cb:SetChecked(Database.reportJump)
 
+        local debugButton = CreateFrame("CheckButton", nil, panel, "InterfaceOptionsCheckButtonTemplate")
+        debugButton:SetPoint("TOPLEFT", cb, 0, -30)
+        debugButton.Text:SetText("debug")
+        debugButton:HookScript("OnClick", function(_, btn, down)
+            Database.debug = debugButton:GetChecked()
+        end)
+        debugButton:SetChecked(Database.debug)
+
         local btn = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
-        btn:SetPoint("TOPLEFT", cb, 0, -40)
+        btn:SetPoint("TOPLEFT", cb, 0, -60)
         btn:SetText("Click me")
         btn:SetWidth(100)
         btn:SetScript("OnClick", function()
