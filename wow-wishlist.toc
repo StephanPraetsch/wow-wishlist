@@ -3,8 +3,9 @@
 ## Title: Wishlist
 ## Notes: To manage your desired items, e.g. BIS items
 ## Author: Stephan Prätsch
-## SavedVariables: Database
+## SavedVariables: WOW_WISHLIST_Database
 
 Data.lua
 OptionsPanel.lua
+Hooks.lua
 main.lua

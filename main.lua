@@ -1,27 +1,23 @@
 local addonName, addonData = ...
 
 OptionsPanel = addonData.OptionsPanel
-
-ADDON_NAME = "wow-wishlist"
+Data = addonData.Data
+Hooks = addonData.Hooks
 
 local frame = CreateFrame("Frame")
 
 function frame:OnEvent(event, ...)
-    if Database.debug then
+    if WOW_WISHLIST_Database.debug then
         print("onEvent", event, ...)
     end
     self[event](self, event, ...)
 end
 
-function frame:ADDON_LOADED(event, addOnName)
-    if addOnName == ADDON_NAME then
+function frame:ADDON_LOADED(event, addOnName, ...)
+    if addOnName == "wow-wishlist" then
+        Data.init()
         OptionsPanel.init()
-        hooksecurefunc("JumpOrAscendStart", function()
-            if Database.reportJump then
-                Database.jumps = (Database.jumps or 0) + 1
-                print("Your character jumped " .. Database.jumps .. " times")
-            end
-        end)
+        Hooks.init()
     end
 end
 
@@ -30,9 +26,7 @@ function frame:PLAYER_ENTERING_WORLD(event, isLogin, isReload)
 end
 
 function frame:CHAT_MSG_CHANNEL(event, text, playerName, _, channelName)
-    if Database.debug then
-        print("new CHAT_MSG_CHANNEL event", event, text, playerName, channelName)
-    end
+    print("new CHAT_MSG_CHANNEL event", event, text, playerName, channelName)
 end
 
 frame:RegisterEvent("ADDON_LOADED")
