@@ -8,5 +8,6 @@
 
 Data.lua
 OptionsPanel.lua
+WishlistPanel.lua
 Hooks.lua
 main.lua
