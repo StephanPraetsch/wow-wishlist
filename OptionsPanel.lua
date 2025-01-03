@@ -7,7 +7,7 @@ addonData.OptionsPanel = {
     init = function()
         local db = WOW_WISHLIST_Database_Global
 
-        panel = CreateFrame("Frame")
+        local panel = CreateFrame("Frame")
         panel.name = "Wishlist Options"
 
         local cb = CreateFrame("CheckButton", nil, panel, "InterfaceOptionsCheckButtonTemplate")
