@@ -9,8 +9,8 @@ Meta = {
 addonData.Data = {
 
     init = function()
-        WOW_WISHLIST_Database = WOW_WISHLIST_Database or {}
-        WOW_WISHLIST_Database[Meta.id] = WOW_WISHLIST_Database[Meta.id] or {}
+        WOW_WISHLIST_Database_Global = WOW_WISHLIST_Database_Global or {}
+        WOW_WISHLIST_Database_Chars = WOW_WISHLIST_Database_Chars or {}
         --DevTools_Dump(WOW_WISHLIST_Database)
     end,
 

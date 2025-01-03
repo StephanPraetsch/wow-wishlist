@@ -7,7 +7,7 @@ Hooks = addonData.Hooks
 local frame = CreateFrame("Frame")
 
 function frame:OnEvent(event, ...)
-    if WOW_WISHLIST_Database.debug then
+    if WOW_WISHLIST_Database_Global and WOW_WISHLIST_Database_Global.debug then
         print("onEvent", event, ...)
     end
     self[event](self, event, ...)

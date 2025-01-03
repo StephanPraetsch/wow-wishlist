@@ -5,7 +5,7 @@ local state = {}
 addonData.OptionsPanel = {
 
     init = function()
-        local db = WOW_WISHLIST_Database
+        local db = WOW_WISHLIST_Database_Global
 
         panel = CreateFrame("Frame")
         panel.name = "Wishlist Options"

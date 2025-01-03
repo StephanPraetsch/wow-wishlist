@@ -3,11 +3,12 @@ local addonName, addonData = ...
 addonData.Hooks = {
 
     init = function()
-        local db = WOW_WISHLIST_Database
+        local dbGlobal = WOW_WISHLIST_Database_Global
+        local dbChar = WOW_WISHLIST_Database_Chars
         hooksecurefunc("JumpOrAscendStart", function()
-            if db.reportJump then
-                db[Meta.id].jumps = (db[Meta.id].jumps or 0) + 1
-                print("Your character " .. Meta.player .. " jumped " .. db[Meta.id].jumps .. " times")
+            if dbGlobal.reportJump then
+                dbChar.jumps = (dbChar.jumps or 0) + 1
+                print("Your character " .. Meta.player .. " jumped " .. dbChar.jumps .. " times")
             end
         end)
     end
